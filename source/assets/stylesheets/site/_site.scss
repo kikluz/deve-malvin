@@ -20,7 +20,7 @@
 }
 
 .site-main {
-  @include section_padding(2em);
+ //@include section_padding(2em);
 }
 
 .site-footer {
@@ -113,4 +113,14 @@ figure.show {
   padding: 10px 10px 15px 5px;
   border-top-right-radius: 3px;
   border-bottom-right-radius: 3px;
+}
+
+// ------------------------------------------------------------
+// Section style
+// ------------------------------------------------------------
+// Enter Neat
+section {
+  @include outer-container;
+  aside { @include span-columns(6); }
+  article { @include span-columns(6); }
 }
