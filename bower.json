@@ -1,0 +1,15 @@
+{
+   "name": "boilerplate",
+   "description": "Frontend tool packages that you'l almost always want",
+   "version": "0.0.1",
+   "dependencies": {
+     "jquery": "2.1.0",
+     "fitvids": "~1.0.3",
+     "magnific-popup": "~1.1.0",
+     "bourbon": "3.1.8",
+     "neat": "1.4.0",
+     "waypoints": "~2.0.4",
+     "fastclick": "~0.6.11",
+     "social-sharing-buttons": "https://github.com/cshold/social-sharing-buttons.git#*"
+   }
+ }
