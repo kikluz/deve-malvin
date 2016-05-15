@@ -120,7 +120,9 @@ figure.show {
 // ------------------------------------------------------------
 // Enter Neat
 section {
-  @include outer-container;
-  aside { @include span-columns(6); }
-  article { @include span-columns(6); }
+  @include media($medium-screen) {
+    @include outer-container;
+    aside { @include span-columns(6); }
+    article { @include span-columns(6); }
+  }
 }
