@@ -37,3 +37,80 @@ h4, h5, h6 {
   line-height: 1; // Set line-height smaller on larger fonts
   color: #006699;
 }
+
+// ------------------------------------------------------------
+// SLideSho on click http://codepen.io/leemark/pen/Ddgsx
+// ------------------------------------------------------------
+.hero-slideshow {
+  img {
+    width: 100%;
+    height: auto;
+  }
+  position: relative;
+  display: block;
+  max-height: 600px;
+  overflow: hidden;
+  p {
+    margin: 10px 20px;
+    color: #fff;
+  }
+  a {
+   color:#fff;
+  }
+}
+figure {
+  position: absolute;
+  opacity: 0;
+  transition: 1s opacity;
+//  The problem was being caused by fractional widths. For example using 100% width
+// https://css-tricks.com/forums/topic/css3-transition-opacity-causing-glitch-in-images/
+  -webkit-transform: translateZ(0);
+  width: calc(100% + .49px);
+}
+figcaption {
+  position: absolute;
+    @include media($medium-screen) {
+    font-family: sans-serif;
+    font-size: .8em;
+    bottom: .75em;
+    right: .35em;
+    padding: .25em;
+    color: #fff;
+    background: rgba(0,0,0, .25);
+    border-radius: 2px; 
+    a { color: #fff;}
+  }
+}
+
+figure.show {
+  opacity: 1;
+  position: static;
+  transition: 1s opacity;
+}
+.next, .prev {
+  color: #fff;
+  position: absolute;
+  background: rgba(0,0,0, .6);
+  top: 50%;
+  z-index: 1;
+  font-size: 2em;
+  margin-top: -.75em;
+  opacity: .3;
+  user-select: none;
+}
+.next:hover, .prev:hover {
+  cursor: pointer;
+  opacity: 1;
+}
+.next {
+  right: 0;
+  padding: 10px 5px 15px 10px;
+  border-top-left-radius: 3px;
+  border-bottom-left-radius: 3px;
+}
+.prev {
+  left: 0;
+  padding: 10px 10px 15px 5px;
+  border-top-right-radius: 3px;
+  border-bottom-right-radius: 3px;
+}
