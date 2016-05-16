@@ -153,13 +153,16 @@ section {
 // Pannel
 // ------------------------------------------------------------
 
-.one-tile {
+.fb-panel {
+
   position: relative;
-  width: 100%;
+  display: block;
+  max-height: 600px;
   overflow: hidden;
+
 }
 
-.one-tile:hover .img-back-end-portfolio {
+.fb-panel:hover .img-back-end-portfolio {
   transform: scale(1.03);
   -webkit-filter: brightness(30%);
 }
@@ -194,7 +197,7 @@ section {
   transition: all 300ms ease-out 0ms; /* Needed for the jQuery animation */
 }
 // ------------------------------------------------------------
-// Gallery http://codepen.io/svelts/pen/VYxPWW
+// http://jsfiddle.net/webtiki/zMMH5/3/?utm_source=website&utm_medium=embed&utm_campaign=zMMH5
 // ------------------------------------------------------------
 
 #wrap {

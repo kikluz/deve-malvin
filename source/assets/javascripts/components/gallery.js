@@ -1,5 +1,5 @@
 /* Backend portfolio gallery animation. It requires h4 and p to have 0 default opacity */
-$(".one-tile").hover(function () {
+$(".fb-panel").hover(function () {
    $(this).find('h4').animate({opacity: '1', bottom: '10px'}, 100, 'swing');
    $(this).find('p').delay(100).animate({opacity: '1', bottom: '10px'}, 100, 'swing');
 },
