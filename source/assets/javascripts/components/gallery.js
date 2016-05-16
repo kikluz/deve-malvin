@@ -38,3 +38,6 @@ $(document).keyup(function(e) {
 $(".arrowr").click(function(){
   next();
 });
+
+///////
+ // portfolio
