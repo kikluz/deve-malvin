@@ -1,67 +1,64 @@
 ---
 title: Davesrightmind | Gallery
 ---
+<link rel="stylesheet" href="gallery.css">
 
-<aside><div>
-  <span onclick="xit()" class="ex"></span>
-  <img src="http://filmcrithulk.files.wordpress.com/2011/06/35416186_3b669524a5_o.jpg" onclick="image(0)">
-  <a href="#" onclick="image(0)" class="r">&#187;</a>
-  <p>1 / 8</p>
-</div></aside>
 
-<aside><div>
-  <span onclick="xit()" class="ex"></span>
-  <img src="http://www.modernmythmedia.com/wp-content/uploads/2013/04/Iron-Man-wallpaper-2-2032-e1367196003357.jpg" onclick="image(1)">
-  <a href="#" onclick="prev(0)">&#171;</a>
-  <a href="#" onclick="image(1)" class="r">&#187;</a>
-  <p>2 / 8</p>
-</div></aside>
 
-<aside><div>
-  <span onclick="xit()" class="ex"></span>
-  <img src="http://media.dcentertainment.com/sites/default/files/character_bio_576_superman_0.jpg" onclick="image(2)">
-  <a href="#" onclick="prev(1)">&#171;</a>
-  <a href="#" onclick="image(2)" class="r">&#187;</a>
-  <p>3 / 8</p>
-</div></aside>
+    <a class="lightbox" href="#image1">
+      <%= image_tag 'glaarg_by_davesrightmind-d982qac.jpg' %>
+    </a> 
+    <div class="lightbox-target" id="image1">
+      <%= image_tag 'glaarg_by_davesrightmind-d982qac.jpg' %>
+    <a class="lightbox-close" href="#"></a>
+    </div>
+  
 
-<aside><div>
-  <span onclick="xit()" class="ex"></span>
-  <img src="http://static.comicvine.com/uploads/original/4/49376/3482829-5416486156-green.jpg" onclick="image(3)">
-  <a href="#" onclick="prev(2)">&#171;</a>
-  <a href="#" onclick="image(3)" class="r">&#187;</a>
-  <p>4 / 8</p>
-  </div></aside>
+    <a class="lightbox" href="#image2">
+      <img src="http://i870.photobucket.com/albums/ab270/frenchspy007/59e13828-da06-4ed7-b90c-09d86074a30c_zps0f64c9ee.png"/>
+    </a> 
+    <div class="lightbox-target" id="image2">
+      <img src="http://i870.photobucket.com/albums/ab270/frenchspy007/darksouls_zps214e3a97.png"/>
+    <a class="lightbox-close" href="#"></a>
+    </div>
+    
+  
+<br />
 
-<aside><div>
-  <span onclick="xit()" class="ex"></span>
-  <img src="http://static.comicvine.com/uploads/original/0/40/3207042-batman_arkham_origins-wide.jpg" onclick="image(4)">
-  <a href="#" onclick="prev(3)">&#171;</a>
-  <a href="#" onclick="image(4)" class="r">&#187;</a>
-  <p>5 / 8</p>
-  </div></aside>
-
-<aside><div>
-  <span onclick="xit()" class="ex"></span>
-  <img src="http://fc09.deviantart.net/fs70/i/2013/160/f/e/168_martian_manhunter_by_colouronly85-d68faw4.jpg" onclick="image(5)">
-  <a href="#" onclick="prev(4)">&#171;</a>
-  <a href="#" onclick="image(5)" class="r">&#187;</a>
-  <p>6 / 8</p>
-  </div></aside>
-
-<aside><div>
-  <span onclick="xit()" class="ex"></span>
-  <img src="http://foreignpolicyblogs.com/wp-content/uploads/Captain-America-Wallpaper-HD-e1353425843775.jpg" onclick="image(6)">
-  <a href="#" onclick="prev(5)">&#171;</a>
-  <a href="#" onclick="image(6)" class="r">&#187;</a>
-  <p>7 / 8</p>
-  </div></aside>
-
-<aside><div>
-  <span onclick="xit()" class="ex"></span>
-  <img src="http://static.comicvine.com/uploads/original/12/123441/3002319-flash-the-rebirth-dc-comics-5286848-1280-1024.jpg" onclick="image(7)">
-  <a href="#" onclick="prev(6)">&#171;</a>
-  <p>8 / 8</p>
-  </div></aside>
-
-<section id="fire"></section>
+<div class="grid-items">
+  <a href="#image1" class="grid-item lightbox">
+    <img src="https://raw.githubusercontent.com/thoughtbot/refills/49db8c0f2f8066c2c3a275781503fe3303a1a9fc/source/images/placeholder.png" alt="">
+    <h1>Grid Item</h1>
+    <p>Lorem ipsum dolor sit amet, elit. Rem, illum.</p>
+  </a>
+  <a href="javascript:void(0)" class="grid-item grid-item-big grid-item-image">
+    <img src="https://raw.githubusercontent.com/thoughtbot/refills/49db8c0f2f8066c2c3a275781503fe3303a1a9fc/source/images/placeholder.png" alt="">
+    <h1>Grid Item With an Image</h1>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem, illum.</p>
+  </a>
+  <a href="javascript:void(0)" class="grid-item grid-item-big">
+    <img src="https://raw.githubusercontent.com/thoughtbot/refills/49db8c0f2f8066c2c3a275781503fe3303a1a9fc/source/images/placeholder.png" alt="">
+    <h1>Another Wide Item</h1>
+    <p>Lorem ipsum consectetur dolor sit amet, consectetur adipisicing elit. Rem, illum.</p>
+  </a>
+  <a href="javascript:void(0)" class="grid-item">
+    <img src="https://raw.githubusercontent.com/thoughtbot/refills/49db8c0f2f8066c2c3a275781503fe3303a1a9fc/source/images/placeholder.png" alt="">
+    <h1>Last Grid Item</h1>
+    <p>Lorem ipsum dolor sit amet, elit. Rem, illum.</p>
+  </a>
+  <a href="javascript:void(0)" class="grid-item">
+    <img src="https://raw.githubusercontent.com/thoughtbot/refills/49db8c0f2f8066c2c3a275781503fe3303a1a9fc/source/images/placeholder.png" alt="">
+    <h1>Last Grid Item</h1>
+    <p>Lorem ipsum dolor sit amet, elit. Rem, illum.</p>
+  </a>
+  <a href="javascript:void(0)" class="grid-item">
+    <img src="https://raw.githubusercontent.com/thoughtbot/refills/49db8c0f2f8066c2c3a275781503fe3303a1a9fc/source/images/placeholder.png" alt="">
+    <h1>A Grid Item</h1>
+    <p>Lorem ipsum dolor sit amet, elit. Rem, illum.</p>
+  </a>
+  <a href="javascript:void(0)" class="grid-item">
+    <img src="https://raw.githubusercontent.com/thoughtbot/refills/49db8c0f2f8066c2c3a275781503fe3303a1a9fc/source/images/placeholder.png" alt="">
+    <h1>Item</h1>
+    <p>Lorem ipsum dolor sit amet, elit. Rem, illum.</p>
+  </a>
+</div>

@@ -130,16 +130,16 @@ section {
 // ------------------------------------------------------------
 // Section Gallery
 // ------------------------------------------------------------
+/*
 .gallery { 
   div {
     float:left;
 
-    /* width of containing div */
+   
     width:100%;
     @include media($medium-screen) {width:50%;}
     @include media($large-screen) {width:33.3%;}
 
-    /* responsive image */
     img {
       float:left; 
       width:100%;
@@ -147,7 +147,7 @@ section {
     }
   }
 }
-
+*/
 
 // ------------------------------------------------------------
 // Pannel
@@ -199,121 +199,229 @@ section {
 // ------------------------------------------------------------
 // http://codepen.io/juston/pen/aCDzr
 // ------------------------------------------------------------
-* {
-   padding:0;
-    margin:0;
-  color:white;
+/*Eliminates padding, centers the thumbnail */
+
+/* Styles the thumbnail */
+
+a.lightbox img {
+height: 150px;
+width:150px;
+border: 3px solid white;
+box-shadow: 0px 0px 8px rgba(0,0,0,.3);
+margin: 20px;
 }
-aside {
-  width:((100% - (5 * 2%)) / 4);
-  height:150px;
-  overflow:hidden;
-  float:left;
-  margin:2% 2% 0 0;
-  transition: all 0.3s;
-  box-shadow:0 3px 8px rgba(0,0,0,0.5);
-  &:nth-child(4n - 3) {
-    margin-left:2%;
-  }
-  @media all and (max-width: 900px) {
-    width:((100% - (5 * 2%)) / 3);
-    &:nth-child(4n - 3) {
-    margin-left:0;
+
+/* Styles the lightbox, removes it from sight and adds the fade-in transition */
+
+.lightbox-target {
+position: fixed;
+top: 0;
+left:0;
+width: 100%;
+background: rgba(0,0,0,.7);
+width: 100%;
+opacity: 0;
+-webkit-transition: opacity .5s ease-in-out;
+-moz-transition: opacity .5s ease-in-out;
+-o-transition: opacity .5s ease-in-out;
+transition: opacity .5s ease-in-out;
+overflow: hidden;
+}
+
+/* Styles the lightbox image, centers it vertically and horizontally, adds the zoom-in transition and makes it responsive using a combination of margin and absolute positioning */
+
+.lightbox-target img {
+margin: auto;
+position: absolute;
+top: 0;
+left:0;
+right:0;
+bottom: 0;
+max-height: 0%;
+max-width: 0%;
+border: 3px solid white;
+box-shadow: 0px 0px 8px rgba(0,0,0,.3);
+box-sizing: border-box;
+-webkit-transition: .5s ease-in-out;
+-moz-transition: .5s ease-in-out;
+-o-transition: .5s ease-in-out;
+transition: .5s ease-in-out;
+}
+
+/* Styles the close link, adds the slide down transition */
+
+a.lightbox-close {
+display: block;
+width:50px;
+height:50px;
+box-sizing: border-box;
+background: white;
+color: black;
+text-decoration: none;
+position: absolute;
+top: -80px;
+right: 0;
+-webkit-transition: .5s ease-in-out;
+-moz-transition: .5s ease-in-out;
+-o-transition: .5s ease-in-out;
+transition: .5s ease-in-out;
+}
+
+/* Provides part of the "X" to eliminate an image from the close link */
+
+a.lightbox-close:before {
+content: "";
+display: block;
+height: 30px;
+width: 1px;
+background: black;
+position: absolute;
+left: 26px;
+top:10px;
+-webkit-transform:rotate(45deg);
+-moz-transform:rotate(45deg);
+-o-transform:rotate(45deg);
+transform:rotate(45deg);
+}
+
+/* Provides part of the "X" to eliminate an image from the close link */
+
+a.lightbox-close:after {
+content: "";
+display: block;
+height: 30px;
+width: 1px;
+background: black;
+position: absolute;
+left: 26px;
+top:10px;
+-webkit-transform:rotate(-45deg);
+-moz-transform:rotate(-45deg);
+-o-transform:rotate(-45deg);
+transform:rotate(-45deg);
+}
+
+/* Uses the :target pseudo-class to perform the animations upon clicking the .lightbox-target anchor */
+
+.lightbox-target:target {
+opacity: 1;
+top: 0;
+bottom: 0;
+}
+
+.lightbox-target:target img {
+max-height: 100%;
+max-width: 100%;
+}
+
+.lightbox-target:target a.lightbox-close {
+top: 0px;
+}
+///////////////////////////
+@mixin grid-item-columns($columns) {
+  width: (100% / 12) * $columns;
+}
+
+.grid-items {
+  $action-color: #477DCA !default;
+  $base-background-color: white !default;
+  $medium-screen: 40em !default;
+  $large-screen: 53.75em !default;
+  $grid-items-background: $base-background-color;
+  $grid-item-background: desaturate($action-color, 30%);
+  $grid-item-colors:
+    desaturate($action-color, 30%),
+    #3581A5,
+    #5FBEBE,
+    #98C79A,
+    #A7A891,
+    #BDCC97,
+    #979EA0;
+  $grid-item-border-size: 9px;
+  $grid-item-columns: 4;
+  $grid-item-big-columns: 8;
+  $grid-item-color: white;
+  $grid-item-height: 14em;
+
+  @include clearfix;
+
+  .grid-item {
+    background: $grid-item-background;
+    border-bottom: $grid-item-border-size solid $grid-items-background;
+    border-left: ($grid-item-border-size / 2) solid $grid-items-background;
+    border-right: ($grid-item-border-size / 2) solid $grid-items-background;
+    border-top: 0;
+    cursor: pointer;
+    float: left;
+    height: $grid-item-height;
+    outline: none;
+    overflow: hidden;
+    padding: 2em;
+    text-align: center;
+    text-decoration: none;
+    transition: all 0.2s ease-in-out;
+    width: 100%;
+
+    @include media($large-screen) {
+      @include grid-item-columns($grid-item-columns);
     }
-    &:nth-child(3n -2) {
-    margin-left:2%;
+
+    @for $i from 1 through length($grid-item-colors) { // assign colors from $grid-item-colors list
+      &:nth-child(#{$i}) {
+        $background-from-list: nth($grid-item-colors, $i);
+        background-color: $background-from-list;
+        box-shadow: inset 0 0 1px 2px darken($background-from-list, 10%);
+
+        &:focus,
+        &:hover {
+          background-color: darken($background-from-list, 10%);
+          background-position: top;
+          background-repeat: no-repeat;
+          background-size: cover;
+        }
+      }
     }
   }
-  div, img {
-     min-width:100%; 
-    min-height:100%;
+
+  .grid-item img {
+    display: block;
+    height: 3em;
+    margin: 0 auto 1em;
   }
-}
-aside:hover {
-  transform:scale(1.1);
-  box-shadow:0 12px 8px -5px rgba(0,0,0,0.3);
-}
-div {
-  width:300px;
-}
-div:hover {
-  cursor:pointer;
-}
-div img {
-  width:100%;
-}
-div a, div span {
-  display:none;
-   opacity:0; 
-}
-section div {
-  width:800px;
-  position:absolute;
-  left:50%;
-  margin-left:-400px;
-  top:0;
-}
-section {
-  display:none;
-  position:fixed;
-  z-index:999;
-  background-color:rgba(0,0,0,0.95);
-  height:100%;
-  width:100%;
-  top:0;
-  left:0;
-}
-section a {
-  margin-bottom:10px;
-  color:#ffffff; 
-  background-color:rgba(0,0,0,0.5);
-  text-decoration:none;
-  position:absolute;
-  padding:20px 15px;
-  top:44%;
-}
-section div a, section div  span {
-  display:inline;
-  transition: all 0.35s;
-}
-section div:hover a, section div:hover span {
-   opacity:1; 
-}
-section span {
-  position:absolute;
-  right:0;
-  padding:20px;
-}
-.ex::before {
-      opacity: 1;
-      transform-origin:center;
-      height: 2px; 
-      width: 12px;
-      content: '';
-      background:white;
-      left: 17px;
-      top: 15px;
-      position: absolute;
-      transform: rotate(45deg);
+
+  .grid-item h1 {
+    color: $grid-item-color;
+    font-size: 1.3em;
+    margin-bottom: 0.4em;
   }
-  .ex::after {
-      opacity: 1;
-      transform-origin:center;
-      height: 12px; 
-      width: 2px;
-      content: '';
-      background:white;
-      left: 22px;
-      top: 10px;
-      position: absolute;
-      transform: rotate(45deg);
- }
-.r {
-   right:0; 
-}
-.f {
-   margin-bottom:30px;
-}
-p {
-   text-align:center; 
+
+  .grid-item p {
+    color: transparentize($grid-item-color, 0.3);
+    line-height: 1.5em;
+    margin: auto;
+
+    @include media($medium-screen) {
+      max-width: 70%;
+    }
+  }
+
+  .grid-item-big {
+    @include media($large-screen) {
+      @include grid-item-columns($grid-item-big-columns);
+    }
+
+    p {
+      @include media($medium-screen) {
+        max-width: 60%;
+      }
+    }
+  }
+
+  .grid-item-image {
+    background: url("https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/mountains.png");
+    background-color: $grid-item-background;
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
 }

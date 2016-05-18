@@ -11,30 +11,3 @@ function (){
 // ------------------------------------------------------------
 // Gallery http://codepen.io/svelts/pen/VYxPWW
 // ------------------------------------------------------------
-var lix = true;
-
-function image(x) {
-  var section = document.getElementById('fire');
-  
-  if(lix == true) { 
-   var kid = document.getElementsByTagName("div")[x].cloneNode(true);
-   section.appendChild(kid);
-   section.style.display="block";
-    lix=false;
-  }
-  else {
-     var kid2 = document.getElementsByTagName("div")[x+1].cloneNode(true);
-     section.replaceChild(kid2,section.getElementsByTagName("div")[0]);
-    }  
-}
-function prev(y) {
-    var section = document.getElementById('fire');
-    var kid2 = document.getElementsByTagName("div")[y].cloneNode(true);
-    section.replaceChild(kid2,section.getElementsByTagName("div")[0]);
-}
-function xit() {
-   lix = true;
-    var section = document.getElementById('fire');
-    section.removeChild(section.getElementsByTagName("div")[0]);
-    section.style.display="none";
-}
