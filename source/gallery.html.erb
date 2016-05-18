@@ -1,38 +1,30 @@
 ---
 title: Davesrightmind | Gallery
 ---
-<link rel="stylesheet" href="gallery.css">
 
+<a class="lightbox" href="#image1">
+  <%= image_tag 'glaarg_by_davesrightmind-d982qac.jpg' %>
+</a> 
+<div class="lightbox-target" id="image1">
+  <%= image_tag 'glaarg_by_davesrightmind-d982qac.jpg' %>
+  <a class="lightbox-close" href="#"></a>
+</div>
 
+<a class="lightbox" href="#image2">
+  <img src="http://i870.photobucket.com/albums/ab270/frenchspy007/59e13828-da06-4ed7-b90c-09d86074a30c_zps0f64c9ee.png"/>
+</a> 
+<div class="lightbox-target" id="image2">
+  <img src="http://i870.photobucket.com/albums/ab270/frenchspy007/darksouls_zps214e3a97.png"/>
+  <a class="lightbox-close" href="#"></a>
+</div>
 
-    <a class="lightbox" href="#image1">
-      <%= image_tag 'glaarg_by_davesrightmind-d982qac.jpg' %>
-    </a> 
-    <div class="lightbox-target" id="image1">
-      <%= image_tag 'glaarg_by_davesrightmind-d982qac.jpg' %>
-    <a class="lightbox-close" href="#"></a>
-    </div>
-  
-
-    <a class="lightbox" href="#image2">
-      <img src="http://i870.photobucket.com/albums/ab270/frenchspy007/59e13828-da06-4ed7-b90c-09d86074a30c_zps0f64c9ee.png"/>
-    </a> 
-    <div class="lightbox-target" id="image2">
-      <img src="http://i870.photobucket.com/albums/ab270/frenchspy007/darksouls_zps214e3a97.png"/>
-    <a class="lightbox-close" href="#"></a>
-    </div>
-    
-  
 <br />
-
 <div class="grid-items">
-  <a href="#image1" class="grid-item lightbox">
-    <img src="https://raw.githubusercontent.com/thoughtbot/refills/49db8c0f2f8066c2c3a275781503fe3303a1a9fc/source/images/placeholder.png" alt="">
+  <a href="#image1" class="grid-item  grid-item-image lightbox">
     <h1>Grid Item</h1>
     <p>Lorem ipsum dolor sit amet, elit. Rem, illum.</p>
   </a>
   <a href="javascript:void(0)" class="grid-item grid-item-big grid-item-image">
-    <img src="https://raw.githubusercontent.com/thoughtbot/refills/49db8c0f2f8066c2c3a275781503fe3303a1a9fc/source/images/placeholder.png" alt="">
     <h1>Grid Item With an Image</h1>
     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem, illum.</p>
   </a>

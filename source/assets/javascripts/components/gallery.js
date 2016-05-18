@@ -9,5 +9,5 @@ function (){
    $(this).find('p').delay(200).animate({bottom: '-10px'}, 0, 'swing');
 });
 // ------------------------------------------------------------
-// Gallery http://codepen.io/svelts/pen/VYxPWW
+// Gallery 
 // ------------------------------------------------------------
