@@ -11,34 +11,30 @@ function (){
 // ------------------------------------------------------------
 // Gallery http://codepen.io/svelts/pen/VYxPWW
 // ------------------------------------------------------------
+var lix = true;
 
-$("section img").click(function(){
-  $(".lightbox").fadeIn(300);
-  $(".lightbox").append("<img src='" + $(this).attr("src") + "' alt='" + $(this).attr("alt") + "' />" );
-  $(".filter").css("background-image", "url(" + $(this).attr("src") + ")");
-  $(".title").append("<h1>" + $(this).attr("alt") + "</h1>" );
-  $("html").css("overflow","hidden");
-});
-
-$(".close").click(function(){
-  $(".lightbox").fadeOut(300);
-  $("h1").remove();
-  $(".lightbox img").remove();
-  $("html").css("overflow","auto");
-});
-
-$(document).keyup(function(e) {
-  if (e.keyCode == 27) {
-    $(".lightbox").fadeOut(300); 
-    $(".lightbox img").remove();
-    $("html").css("overflow","auto");
+function image(x) {
+  var section = document.getElementById('fire');
+  
+  if(lix == true) { 
+   var kid = document.getElementsByTagName("div")[x].cloneNode(true);
+   section.appendChild(kid);
+   section.style.display="block";
+    lix=false;
   }
-});
-
-$(".arrowr").click(function(){
-  next();
-});
-
-///////
- // portfolio
- 
+  else {
+     var kid2 = document.getElementsByTagName("div")[x+1].cloneNode(true);
+     section.replaceChild(kid2,section.getElementsByTagName("div")[0]);
+    }  
+}
+function prev(y) {
+    var section = document.getElementById('fire');
+    var kid2 = document.getElementsByTagName("div")[y].cloneNode(true);
+    section.replaceChild(kid2,section.getElementsByTagName("div")[0]);
+}
+function xit() {
+   lix = true;
+    var section = document.getElementById('fire');
+    section.removeChild(section.getElementsByTagName("div")[0]);
+    section.style.display="none";
+}
