@@ -316,6 +316,7 @@ max-width: 100%;
 
 .lightbox-target:target a.lightbox-close {
 top: 0px;
+ z-index: 99999;
 }
 ///////////////////////////
 @mixin grid-item-columns($columns) {
