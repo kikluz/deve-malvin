@@ -302,6 +302,7 @@ transform:rotate(-45deg);
 /* Uses the :target pseudo-class to perform the animations upon clicking the .lightbox-target anchor */
 
 .lightbox-target:target {
+  z-index: 99;
 opacity: 1;
 top: 0;
 bottom: 0;
@@ -314,7 +315,7 @@ max-width: 100%;
 
 .lightbox-target:target a.lightbox-close {
 top: 0px;
- z-index: 99999;
+ z-index: 99;
 }
 // ------------------------------------------------------------
 // Grid from refills http://refills.bourbon.io/
@@ -397,6 +398,13 @@ top: 0px;
   }
   .grid-item-image1 {
     background: url("../images/ord_teen_by_davesrightmind.jpg");
+    background-color: $grid-item-background;
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .grid-item-image2 {
+    background: url("../images/ro_kashh_by_davesrightmind-d87l8v6.jpg");
     background-color: $grid-item-background;
     background-position: top;
     background-repeat: no-repeat;
