@@ -303,9 +303,9 @@ transform:rotate(-45deg);
 
 .lightbox-target:target {
   z-index: 99;
-opacity: 1;
-top: 0;
-bottom: 0;
+  opacity: 1;
+  top: 0;
+  bottom: 0;
 }
 
 .lightbox-target:target img {
@@ -388,23 +388,51 @@ top: 0px;
       @include grid-item-columns($grid-item-big-columns);
     }
   }
-
-  .grid-item-image {
+/// Images form gallery
+  .grid-item-image1 {
     background: url("../images/glaarg_by_davesrightmind-d982qac.jpg");
     background-color: $grid-item-background;
     background-position: top;
     background-repeat: no-repeat;
     background-size: cover;
   }
-  .grid-item-image1 {
+  .grid-item-image2 {
     background: url("../images/ord_teen_by_davesrightmind.jpg");
     background-color: $grid-item-background;
     background-position: top;
     background-repeat: no-repeat;
     background-size: cover;
   }
-  .grid-item-image2 {
+  .grid-item-image3 {
     background: url("../images/ro_kashh_by_davesrightmind-d87l8v6.jpg");
+    background-color: $grid-item-background;
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .grid-item-image4 {
+    background: url("../images/glacier_terror_2016_by_davesrightmind-d9ph2a1.jpg");
+    background-color: $grid-item-background;
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .grid-item-image5 {
+    background: url("../images/glacier_terror_2016_by_davesrightmind-d9ph2a1.jpg");
+    background-color: $grid-item-background;
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .grid-item-image6 {
+    background: url("../images/glacier_terror_2016_by_davesrightmind-d9ph2a1.jpg");
+    background-color: $grid-item-background;
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .grid-item-image7 {
+    background: url("../images/glacier_terror_2016_by_davesrightmind-d9ph2a1.jpg");
     background-color: $grid-item-background;
     background-position: top;
     background-repeat: no-repeat;
