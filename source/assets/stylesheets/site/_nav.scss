@@ -121,6 +121,8 @@
 .menu-active {
 
   .nav-links {
+    display: block;
+    z-index: 99;
     height: auto;
     overflow: auto;
     position: absolute;
