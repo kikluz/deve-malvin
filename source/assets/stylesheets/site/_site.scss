@@ -22,9 +22,7 @@
  //@include section_padding(2em);
      background: #1E1E1E;
 }
-.module {
-  @include section_padding(2em);
-}
+
 
 .site-footer {
   @include section_padding(1em);
