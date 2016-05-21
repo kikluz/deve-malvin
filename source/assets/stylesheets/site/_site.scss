@@ -15,12 +15,15 @@
   @include media($medium-screen) {
     border-bottom:none;
   }
-  background-color: rgba(31,31,31,100)
+  background-color: #424242;
 }
 
 .site-main {
  //@include section_padding(2em);
- background: rgba(34, 34, 34, 0.2);
+     background: #1E1E1E;
+}
+.module {
+  @include section_padding(2em);
 }
 
 .site-footer {
@@ -43,7 +46,7 @@ p {
   font-family: "Trebuchet MS", sans-serif;
 }
 hr {
-color: #8dc13e;
+border-color: #51caff;
 }
 // ------------------------------------------------------------
 // SLideSho on click http://codepen.io/leemark/pen/Ddgsx

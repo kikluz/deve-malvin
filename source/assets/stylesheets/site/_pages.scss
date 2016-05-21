@@ -173,9 +173,9 @@ top: 0px;
 
   .grid-item {
     background: $grid-item-background;
-    border-bottom: $grid-item-border-size solid $grid-items-background;
-    border-left: ($grid-item-border-size / 2) solid $grid-items-background;
-    border-right: ($grid-item-border-size / 2) solid $grid-items-background;
+        border-bottom: 9px solid #1E1E1E;
+    border-left: 4.5px solid #1E1E1E;
+    border-right: 4.5px solid #1E1E1E;
     border-top: 0;
     cursor: pointer;
     float: left;
