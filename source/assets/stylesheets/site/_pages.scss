@@ -15,8 +15,17 @@
 .about_info {
 	@include media($medium-screen) {
 		@include outer-container;
-		aside { @include span-columns(8); }
-		article { @include span-columns(4); }
+		aside { 
+			@include span-columns(8); 
+			img {
+		max-width: 100%;
+		height: auto;
+	}
+		}
+		blockquote { 
+			@include span-columns(4); 
+			    margin-top: 0px;
+		}
 	}
 }
 
