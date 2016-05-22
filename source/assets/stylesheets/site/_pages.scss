@@ -13,7 +13,7 @@
 // Section About page
 // ------------------------------------------------------------
 .about_info {
-		img {
+	img {
 		max-width: 100%;
 		height: auto;
 	}
@@ -22,7 +22,7 @@
 		aside { @include span-columns(8);}
 		blockquote { 
 			@include span-columns(4); 
-		    margin-top: 0px;
+			margin-top: 0px;
 		}
 	}
 }
@@ -30,7 +30,7 @@
 .tumblr-section {
 	@include media($large-screen) {
 		@include outer-container;
-		aside { @include span-columns(5); }
+		blockquote { @include span-columns(5); }
 		article { @include span-columns(7); }
 	}
 }
@@ -38,8 +38,6 @@
 // Gallery lightbox 
 // ------------------------------------------------------------
 /*Eliminates padding, centers the thumbnail */
-
-/* Styles the thumbnail */
 
 a.lightbox img {
 	height: 150px;
@@ -258,21 +256,70 @@ a.lightbox-close:after {
 	background-size: cover;
 }
 .grid-item-image5 {
-	background: url("../images/glacier_terror_2016_by_davesrightmind-d9ph2a1.jpg");
+	background: url("../images/bahamut_rz.jpg");
 	background-color: $grid-item-background;
 	background-position: top;
 	background-repeat: no-repeat;
 	background-size: cover;
 }
 .grid-item-image6 {
-	background: url("../images/glacier_terror_2016_by_davesrightmind-d9ph2a1.jpg");
+	background: url("../images/Beast-Master-Hyenas-Flat.png");
 	background-color: $grid-item-background;
 	background-position: top;
 	background-repeat: no-repeat;
 	background-size: cover;
 }
 .grid-item-image7 {
-	background: url("../images/glacier_terror_2016_by_davesrightmind-d9ph2a1.jpg");
+	background: url("../images/black_lagoon_by_davesrightmind-d9e02sj.jpg");
+	background-color: $grid-item-background;
+	background-position: top;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+.grid-item-image8 {
+	background: url("../images/cancerous_v2_by_davesrightmind-d9p640c.jpg");
+	background-color: $grid-item-background;
+	background-position: top;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+.grid-item-image9 {
+	background: url("../images/deep_sea__crawler_2_by_davesrightmind-d7z8g0c.jpg");
+	background-color: $grid-item-background;
+	background-position: top;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+.grid-item-image10 {
+	background: url("../images/dsailback_by_davesrightmind-da2kljq.jpg");
+	background-color: $grid-item-background;
+	background-position: top;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+.grid-item-image11 {
+	background: url("../images/forbidden_world_tribute_by_davesrightmind-d9j9xxo.jpg");
+	background-color: $grid-item-background;
+	background-position: top;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+.grid-item-image12 {
+	background: url("../images/lava_spewer_3_by_davesrightmind-d8d0s67.jpg");
+	background-color: $grid-item-background;
+	background-position: top;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+.grid-item-image13 {
+	background: url("../images/floating_bony_shrieker_4_by_davesrightmind-da3b5jt.jpg");
+	background-color: $grid-item-background;
+	background-position: top;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+.grid-item-image14 {
+	background: url("../images/alice_meets_the_king_of_the_tulgey_wood_by_davesrightmind-d8y82h3.jpg");
 	background-color: $grid-item-background;
 	background-position: top;
 	background-repeat: no-repeat;
