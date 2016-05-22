@@ -19,8 +19,8 @@
 }
 
 .site-main {
- //@include section_padding(2em);
-     background: #1E1E1E;
+//@include section_padding(2em);
+background: #1E1E1E;
 }
 
 
@@ -28,13 +28,10 @@
   @include section_padding(1em);
   border-top: 1px solid #eee;
   background-color: #1f1f1f;
-  a {
-    color: #ff9933;
-  }
+  a {color: #ff9933;}
+  p {font-size: 0.8em;}
 }
-.footer-icons {
-}
-
+.footer-icons {}
 .social {
   color: #fff;
   text-decoration: none;
@@ -71,20 +68,26 @@
 }
 
 // ------------------------------------------------------------
+// https://codepen.io/lfdumas/pen/aOjzpj form code pen
+// ------------------------------------------------------------
+
+
+
+// ------------------------------------------------------------
 // Typography
 // ------------------------------------------------------------
 
 h1, h2, h3,
 h4, h5, h6 {
-  line-height: 1; // Set line-height smaller on larger fonts
-  color: #006699;
+line-height: 1; // Set line-height smaller on larger fonts
+color: #006699;
 }
 p {
   color: #919191;
   font-family: "Trebuchet MS", sans-serif;
 }
 hr {
-border-color: #51caff;
+  border-color: #51caff;
 }
 // ------------------------------------------------------------
 // SLideSho on click http://codepen.io/leemark/pen/Ddgsx
@@ -103,8 +106,8 @@ border-color: #51caff;
     color: #fff;
   }
   a {
-   color:#fff;
- }
+    color:#fff;
+  }
 }
 figure {
   position: absolute;
