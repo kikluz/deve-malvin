@@ -13,18 +13,16 @@
 // Section About page
 // ------------------------------------------------------------
 .about_info {
-	@include media($medium-screen) {
-		@include outer-container;
-		aside { 
-			@include span-columns(8); 
-			img {
+		img {
 		max-width: 100%;
 		height: auto;
 	}
-		}
+	@include media($medium-screen) {
+		@include outer-container;
+		aside { @include span-columns(8);}
 		blockquote { 
 			@include span-columns(4); 
-			    margin-top: 0px;
+		    margin-top: 0px;
 		}
 	}
 }
