@@ -1,13 +1,13 @@
 // ------------------------------------------------------------
 // Section Contact page
 // ------------------------------------------------------------
-section {
-     padding-bottom: 50px;
-     padding-top: 50px;
-}
+
 .contact_info {
+
 	@include media($medium-screen) {
 		@include outer-container;
+		padding-bottom: 50px;
+		padding-top: 50px;
 		aside { @include span-columns(6); }
 		article { @include span-columns(6); }
 	}
@@ -22,6 +22,8 @@ section {
 	}
 	@include media($medium-screen) {
 		@include outer-container;
+		padding-bottom: 50px;
+		padding-top: 50px;
 		aside { @include span-columns(8);}
 		blockquote { 
 			@include span-columns(4); 
@@ -33,6 +35,8 @@ section {
 .tumblr-section {
 	@include media($large-screen) {
 		@include outer-container;
+		padding-bottom: 50px;
+		padding-top: 50px;
 		blockquote { @include span-columns(5); }
 		article { @include span-columns(7); }
 	}
