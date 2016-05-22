@@ -27,9 +27,13 @@
 .site-footer {
   @include section_padding(1em);
   border-top: 1px solid #eee;
-      background-color: #1f1f1f;
+  background-color: #1f1f1f;
+  a {
+    color: #ff9933;
+  }
 }
-
+.footer-icons {
+}
 // ------------------------------------------------------------
 // Typography
 // ------------------------------------------------------------
