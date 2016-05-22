@@ -143,6 +143,10 @@ figure.show {
   max-height: 600px;
   overflow: hidden;
   height: auto;
+  img {
+    max-width: 100%;
+    height: auto;
+  }
 }
 
 .fb-panel:hover .img-back-end-portfolio {

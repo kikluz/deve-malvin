@@ -1,16 +1,19 @@
 <div class="container module">
-<div class="footer-icons">
+	<div class="footer-icons">
 		<p>
-			<a href="#">
-			<i class="fa fa-facebook-square  fa-3x" aria-hidden="true"></i>
+			<a href="https://www.facebook.com/dave.melvin.7" target="_blank">
+				<i class="fa fa-facebook-square  fa-3x" aria-hidden="true"></i>
 			</a> / 
-			<a href="#" target="_blank">
-			<i class="fa fa-deviantart  fa-3x" aria-hidden="true"></i>
+			<a href="http://davesrightmind.deviantart.com/" target="_blank">
+				<i class="fa fa-deviantart  fa-3x" aria-hidden="true"></i>
 			</a> / 
-			<a href="#" target="_blank"><i class="fa fa-paper-plane  fa-3x" aria-hidden="true"></i></a>
+			<a href="mailto:someone@example.com?Subject=Hello%20again" target="_top"><i class="fa fa-paper-plane  fa-3x" aria-hidden="true"></i></a>
 		</p>
 	</div>
 	<p>Usage of contents and images are only permitted with written permission of their respective owners. Copyright © Davesrightmind, if not otherwise specified.
-		&copy; <%= Time.now.year %> <a href="#">Davesrightmind</a>
+		&copy; <%= Time.now.year %> 
+		<% link_to '/index.html', :relative => true do %>
+		Davesrightmind
+		<% end %>
 	</p>
 </div>
