@@ -1,7 +1,10 @@
 // ------------------------------------------------------------
 // Section Contact page
 // ------------------------------------------------------------
-
+section {
+     padding-bottom: 50px;
+     padding-top: 50px;
+}
 .contact_info {
 	@include media($medium-screen) {
 		@include outer-container;
