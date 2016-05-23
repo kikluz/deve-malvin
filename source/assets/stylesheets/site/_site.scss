@@ -197,16 +197,17 @@ figure.show {
   transform: translateY(-35%);
   padding-left: 15%;
   padding-right: 15%;
-}
-.div-caption h4 {
-  position: relative; /* Needed for the jQuery animation */
-  padding-bottom: 0.5em;
+  h4 {
+  //position: relative; /* Needed for the jQuery animation */
+  //padding-bottom: 0.5em;
   color: #ffffff;
   font-size: 2em;
   text-transform: uppercase;
   opacity: 0;
   transition: all 300ms ease-out 0ms; /* Needed for the jQuery animation  */
 }
+}
+
 .div-caption p {
   position: relative; /* Needed for the jQuery animation */
   color: #ffffff;
