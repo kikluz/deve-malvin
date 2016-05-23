@@ -25,6 +25,9 @@ body {
 }
 
 
+// ------------------------------------------------------------
+// footer icons
+// ------------------------------------------------------------
 .site-footer {
   @include section_padding(1em);
   border-top: 1px solid #eee;
@@ -32,7 +35,10 @@ body {
   a {color: #ff9933;}
   p {font-size: 0.8em;}
 }
-.footer-icons {}
+
+.footer-icons {
+  text-align: center;
+}
 .social {
   color: #fff;
   text-decoration: none;
@@ -197,18 +203,17 @@ figure.show {
   transform: translateY(-35%);
   padding-left: 15%;
   padding-right: 15%;
+  a {color: #ff9933;}
   h4 {
-  //position: relative; /* Needed for the jQuery animation */
-  //padding-bottom: 0.5em;
-  color: #ffffff;
-  font-size: 2em;
-  text-transform: uppercase;
-  opacity: 0;
-  transition: all 300ms ease-out 0ms; /* Needed for the jQuery animation  */
+//position: relative; /* Needed for the jQuery animation */
+//padding-bottom: 0.5em;
+color: #ffffff;
+font-size: 2em;
+text-transform: uppercase;
+opacity: 0;
+transition: all 300ms ease-out 0ms; /* Needed for the jQuery animation  */
 }
-}
-
-.div-caption p {
+p {
   position: relative; /* Needed for the jQuery animation */
   color: #ffffff;
   font-size: 1.5em;
@@ -216,10 +221,5 @@ figure.show {
   opacity: 0;
   transition: all 300ms ease-out 0ms; /* Needed for the jQuery animation */
 }
-// ------------------------------------------------------------
-// footer icons
-// ------------------------------------------------------------
-
-.footer-icons {
-  text-align: center;
 }
+
