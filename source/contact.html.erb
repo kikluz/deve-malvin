@@ -2,6 +2,7 @@
 title: Dave Melvin Art | Contact
 ---
 
+
 <div class="container module">
 	<div>
 		<h1>Contact</h1>
@@ -19,7 +20,7 @@ title: Dave Melvin Art | Contact
 
 			<div class="contact-form">
 				<fieldset>
-					<form action="" method="post">
+					<form action="https://kikluz.wufoo.com/forms/contact/" method="post">
 						<h2>CONTACT</h2>
 						<p>
 							If you have any questions, suggestions or would like to work with me feel free to drop me a message! I'm available for freelance work and always looking forward for new challenges.
@@ -51,3 +52,30 @@ title: Dave Melvin Art | Contact
 	</article>
 </section>
 </div>
+
+
+<% content_for :js do %>
+
+<script type="text/javascript">
+$( document ).ready(function() {
+
+	$.ajax
+	({
+	  type: "POST",
+	  url: "https://kikluz.wufoo.com/api/v3/contact.json",
+	  dataType: 'json',
+	  async: false,
+	  crossDomain: true,
+	  headers: {
+	    "Authorization": "Basic " + btoa("I7ZH-R09X-TXK4-CJ6P:na"),
+	    "Access-Control-Allow-Origin": "localhost"
+	  },
+	  data: '{ "Name": "1", "Email": "2","Phone Number": "3","Untitled": "4" }',
+	  success: function (){
+	    alert('Thanks for your comment!'); 
+	  }
+	});
+
+});
+</script>
+<% end %>
