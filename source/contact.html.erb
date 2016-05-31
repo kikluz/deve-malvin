@@ -1,81 +1,31 @@
 ---
 title: Dave Melvin Art | Contact
 ---
-
-
-<div class="container module">
-	<div>
-		<h1>Contact</h1>
-
-	</div>
-	<hr>
-	<section class="contact_info">
-		<aside>
-			<h2>Don't hesitate to reach out!</h2>
+<section class="hero">
+	<section class="container1">
+		<h1>Contact Me</h1>
+		<h2>Don't hesitate to reach out!</h2>
 			<blockquote>
 				I love designing complete worlds. Even though my speciality is working on interesting Creatures and Characters, whether organic or mechanical.
 			</blockquote>
+	</section>
+</section>
+
+<div class="container module">
+	
+	<section class="contact_info">
+		<aside>
+			
 		</aside>
 		<article>
-
-			<div class="contact-form">
-				<fieldset>
-					<form action="https://kikluz.wufoo.com/forms/contact/" method="post">
-						<h2>CONTACT</h2>
-						<p>
-							If you have any questions, suggestions or would like to work with me feel free to drop me a message! I'm available for freelance work and always looking forward for new challenges.
-						</p>
-						<div>
-							<label for="text_field">Name:</label>
-							<input type="text" id="Field3">
-						</div>
-						<div>
-							<label for="text_field">Email Address:</label>
-							<input type="text" id="Field4">
-						</div>
-						<div>
-							<label for="text_field">Phone Number:</label>
-							<input type="text" id="Field7">
-						</div>
-						<div>
-							<label for="msg">Message:</label>
-							<textarea id="Field5"></textarea>
-						</div>
-						<div>
-							<input type="submit" value="Submit">
-						</div>
-					</form>
-				</fieldset>
-			</div> 
-
-
-	</article>
-</section>
+			<h2>DAVE MELVIN ART</h2>
+			<p>
+				<a href="tel:5107258426">Tel: <em>510-725-8426</em></a>
+			</p>
+			<p>
+				<a href="mailto:scorge40@gmail.com">Mail: <em>scorge40@gmail.com</em></a>
+			</p>
+		</article>
+	</section>
 </div>
 
-
-<% content_for :js do %>
-
-<script type="text/javascript">
-$( document ).ready(function() {
-
-	$.ajax
-	({
-	  type: "POST",
-	  url: "https://kikluz.wufoo.com/api/v3/contact.json",
-	  dataType: 'json',
-	  async: false,
-	  crossDomain: true,
-	  headers: {
-	    "Authorization": "Basic " + btoa("I7ZH-R09X-TXK4-CJ6P:na"),
-	    "Access-Control-Allow-Origin": "localhost"
-	  },
-	  data: '{ "Name": "1", "Email": "2","Phone Number": "3","Untitled": "4" }',
-	  success: function (){
-	    alert('Thanks for your comment!'); 
-	  }
-	});
-
-});
-</script>
-<% end %>
