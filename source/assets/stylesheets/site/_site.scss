@@ -2,6 +2,7 @@
 // ------------------------------------------------------------
 // Layout
 // ------------------------------------------------------------
+P {font-family: "brandon-grotesque",sans-serif;}
 body {
   background: #1E1E1E;
 }
@@ -87,15 +88,15 @@ hr {
   }
   position: relative;
   display: block;
-  //max-height: 600px;
-  overflow: hidden;
-  p {
-    margin: 10px 20px;
-    color: #fff;
-  }
-  a {
-    color:#fff;
-  }
+//max-height: 600px;
+overflow: hidden;
+p {
+  margin: 10px 20px;
+  color: #fff;
+}
+a {
+  color:#fff;
+}
 }
 figure {
   position: absolute;
@@ -116,7 +117,7 @@ figcaption {
     padding: .25em;
     color: #fff;
     background: rgba(0,0,0, .25);
-    border-radius: 2px; 
+    border-radius: 2px;
     a { color: #fff;}
   }
 }
@@ -159,9 +160,11 @@ figure.show {
 // ------------------------------------------------------------
 .intro {
   @include media($medium-screen) {
-    @include outer-container;
-    aside { @include span-columns(6); }
-    article { @include span-columns(6); }
+    p {
+      line-height: 1.4;
+      font-size: 1.5em;
+      max-width: 100%;
+    }
   }
 }
 // ------------------------------------------------------------
@@ -198,21 +201,22 @@ figure.show {
   padding-right: 15%;
   a {color: #ff9933;}
   h4 {
-//position: relative; /* Needed for the jQuery animation */
-//padding-bottom: 0.5em;
-color: #ffffff;
-font-size: 2em;
-text-transform: uppercase;
-opacity: 0;
-transition: all 300ms ease-out 0ms; /* Needed for the jQuery animation  */
-}
-p {
-  position: relative; /* Needed for the jQuery animation */
+  //position: relative; /* Needed for the jQuery animation */
+  //padding-bottom: 0.5em;
+  transform: scale(1.03);
   color: #ffffff;
-  font-size: 1.5em;
+  font-size: 2em;
   text-transform: uppercase;
-  opacity: 0;
-  transition: all 300ms ease-out 0ms; /* Needed for the jQuery animation */
-}
+  //opacity: 0;
+  transition: all 300ms ease-out 0ms; /* Needed for the jQuery animation  */
+  }
+  p {
+    position: relative; /* Needed for the jQuery animation */
+    color: #ffffff;
+    font-size: 1.5em;
+    text-transform: uppercase;
+    //opacity: 0;
+    transition: all 300ms ease-out 0ms; /* Needed for the jQuery animation */
+  }
 }
 
