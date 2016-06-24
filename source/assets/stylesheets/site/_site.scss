@@ -159,6 +159,8 @@ figure.show {
 // Section style intro on index page
 // ------------------------------------------------------------
 .intro {
+  padding-bottom: 20px;
+    padding-top: 20px;
   @include media($medium-screen) {
     p {
       line-height: 1.4;
@@ -178,6 +180,7 @@ figure.show {
   overflow: hidden;
   height: auto;
   img {
+    -webkit-filter: brightness(30%);
     max-width: 100%;
     height: auto;
   }
@@ -185,7 +188,7 @@ figure.show {
 
 .fb-panel:hover .img-back-end-portfolio {
   transform: scale(1.03);
-  -webkit-filter: brightness(30%);
+  //-webkit-filter: brightness(30%);
 }
 .img-back-end-portfolio {
   margin-left: auto;
