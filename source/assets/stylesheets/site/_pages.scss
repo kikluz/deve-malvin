@@ -28,9 +28,18 @@
 		padding-bottom: 50px;
 		padding-top: 50px;
 		aside { @include span-columns(8);}
-		blockquote { 
-			@include span-columns(4); 
+		blockquote {
+			@include span-columns(4);
 			margin-top: 0px;
 		}
 	}
+}
+
+// ------------------------------------------------------------
+// Gallery page
+// ------------------------------------------------------------
+.pannel-hover {
+  @include outer-container;
+  .ph-left { @include span-columns(6); }
+  .ph-right { @include span-columns(6); }
 }

@@ -4,50 +4,40 @@ title: Dave Melvin Art | Gallery
 
 <div class="container">
   <div>
-    <h1>ILLUSTRATION</h1>
+    <h1>Gallery</h1>
     <hr />
   </div>
-</div>
 <!-- Pannel Hover -->
-<a>
-  <div class="fb-panel">
-    <%= image_tag 'alice_meets_the_king_of_the_tulgey_wood_by_davesrightmind-d8y82h3.jpg', class: 'img-back-end-portfolio img-responsive' %>
-    <div class="div-caption">
-      <h4><%= link_to 'Illustration.', '/illustration.html', :relative => true %></h4>
-      <p>Creature Design</p>
-    </div>
-  </div>
-</a>
-<div class="container">
-  <div>
-    <h1>CONCEPT ART</h1>
-    <hr />
-  </div>
+<section class="pannel-hover">
+  <aside class="ph-left">
+    <a>
+      <div class="fb-panel">
+        <%= image_tag 'alice_meets_the_king_of_the_tulgey_wood_by_davesrightmind-d8y82h3.jpg', class: 'img-back-end-portfolio img-responsive' %>
+        <div class="div-caption">
+          <h4><%= link_to 'Illustration.', '/illustration.html', :relative => true %></h4>
+          <p>Creature Design</p>
+        </div>
+      </div>
+    </a>
+  </aside>
+  <aside class="ph-right">
+    <a>
+      <div class="fb-panel">
+        <%= image_tag 'blind_final_2_by_davesrightmind-d7q6lxl.jpg', class: 'img-back-end-portfolio img-responsive' %>
+        <div class="div-caption">
+          <h4><%= link_to 'Concept Art.', '/concept_art.html', :relative => true %></h4>
+          <p>Creature Design</p>
+        </div>
+      </div>
+    </a>
+
+  </aside>
+</section>
 </div>
-<a>
-  <div class="fb-panel">
-    <%= image_tag 'blind_final_2_by_davesrightmind-d7q6lxl.jpg', class: 'img-back-end-portfolio img-responsive' %>
-    <div class="div-caption">
-      <h4><%= link_to 'Concept Art.', '/concept_art.html', :relative => true %></h4>
-      <p>Creature Design</p>
-    </div>
-  </div>
-</a>
+
 
 <div class="container">
 <hr >
   <h1>Checkout my Latest Work!</h1>
   <p><%= lorem.sentences 5 %></p>
-  <section class="tumblr-section">
-    <blockquote>
-      <h1>Pro Tip</h1>
-      <p><%= lorem.sentences 5 %></p>
-    </blockquote>
-    <article class="tumblr-post" data-href="https://embed.tumblr.com/embed/post/xu6zPm7j0A8sEf03xcnR9w/107454171287" data-did="cf6a21ae5f018391ec981a6b486df023dd653337">
-      <a href="http://unwrapping.tumblr.com/post/107454171287/embeddable-tumblr-posts">
-        http://unwrapping.tumblr.com/post/107454171287/embeddable-tumblr-posts
-      </a> 
-    </article>
-    <script async src="https://secure.assets.tumblr.com/post.js"></script>
-  </section>
 </div>
