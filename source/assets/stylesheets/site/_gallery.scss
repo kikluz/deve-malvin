@@ -200,16 +200,18 @@ a.lightbox-close:after {
     @include grid-item-columns($grid-item-big-columns);
   }
 }
-/// Images form gallery
+// ------------------------------------------------------------
+// GALLERY FOR ILLUSTRATION
+// ------------------------------------------------------------
 .grid-item-image1 {
-  background: url("../images/glaarg_by_davesrightmind-d982qac.jpg");
+  background: url("../illustration/Alice-meets-the-King-of-the-Tulgey-Wood.jpg");
   background-color: $grid-item-background;
   background-position: top;
   background-repeat: no-repeat;
   background-size: cover;
 }
 .grid-item-image2 {
-  background: url("../images/ord_teen_by_davesrightmind.jpg");
+  background: url("../illustration/Bioluminescent-Sea-Hunter.jpg");
   background-color: $grid-item-background;
   background-position: top;
   background-repeat: no-repeat;
@@ -299,4 +301,7 @@ a.lightbox-close:after {
   background-repeat: no-repeat;
   background-size: cover;
 }
+// ------------------------------------------------------------
+// GALLERY FOR CONCEPT ART
+// ------------------------------------------------------------
 }
