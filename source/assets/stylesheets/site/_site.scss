@@ -14,10 +14,11 @@ h4, h5, h6 {
 line-height: 1; // Set line-height smaller on larger fonts
 color: #006699;
 }
-p {
+p, blockquote {
   color: #919191;
   font-family: "brandon-grotesque",sans-serif;
 }
+a {color: #ff9933;}
 hr {
   border-color: #51caff;
 }
