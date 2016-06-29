@@ -7,9 +7,9 @@ title: Dave Melvin Art | Gallery
     <h1>Gallery</h1>
     <hr />
   </div>
-<!-- Pannel Hover -->
-<section class="pannel-hover">
-  <aside class="ph-left">
+  <!-- Pannel Hover -->
+  <section class="pannel-hover">
+    <aside class="ph-left">
 
       <div class="fb-panel">
         <%= image_tag '../illustration/Ventaurion3.jpg', class: 'img-back-end-portfolio img-responsive' %>
@@ -18,19 +18,33 @@ title: Dave Melvin Art | Gallery
         </div>
       </div>
 
-  </aside>
-  <aside class="ph-right">
+    </aside>
+    <aside class="ph-right">
       <div class="fb-panel">
         <%= image_tag '../concept_art/Parasyte.jpg', class: 'img-back-end-portfolio img-responsive' %>
         <div class="div-caption">
           <h4><%= link_to 'Concept Art.', '/concept_art.html', :relative => true %></h4>
         </div>
       </div>
-  </aside>
-</section>
+    </aside>
+  </section>
 </div>
 <div class="container">
-<hr >
+  <hr >
   <h1>Checkout my Latest Work!</h1>
-  <p><%= lorem.sentences 5 %></p>
+  <div class="social-icons">
+    <a class="social-icon social-icon--deviantart">
+    </i><i class="fa fa-deviantart" aria-hidden="true"></i>
+      <div class="tooltip">Deviant Art</div>
+    </a>
+    <a class="social-icon social-icon--instagram">
+      <i class="fa fa-instagram"></i>
+      <div class="tooltip">Instagram</div>
+    </a>
+    <a class="social-icon social-icon--facebook">
+      <i class="fa fa-facebook"></i>
+      <div class="tooltip">Facebook</div>
+    </a>
+  </div>
+  <br >
 </div>
