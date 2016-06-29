@@ -3,7 +3,7 @@
 /* Color Variables */
 $color-deviantart: #9eb1a3;
 $color-codepen: #000;
-$color-github: #4284c0;
+
 $color-twitter: #2b97f1;
 $color-dribbble: #ef5a92;
 $color-instagram: #527fa6;
@@ -69,12 +69,10 @@ $color-facebook: #3b5a9b;
   }
 
   &--linkedin { @include social-icon($color-linkedin); }
-  &--twitter { @include social-icon($color-twitter); }
   &--deviantart { @include social-icon($color-deviantart); }
   &--facebook { @include social-icon($color-facebook); }
   &--instagram { @include social-icon($color-instagram); }
-  &--dribbble { @include social-icon($color-dribbble); }
-  &--github { @include social-icon($color-github); }
+
 
   i {
     position: relative;
