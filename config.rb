@@ -1,11 +1,14 @@
 # -------------------------------------------------------------------
 # EXTENSIONS
 # -------------------------------------------------------------------
+require "json"
 
 # custom
 require 'lib/extensions/custom_urls.rb'
 activate :custom_urls
 
+require "lib/helpers/tumblr_helper"
+helpers TumblrHelper
 # gems
 activate :livereload
 activate :directory_indexes
@@ -77,4 +80,14 @@ configure :build do
 =end
   # Alt image path
   # set :http_prefix, "/Content/images/"
+end
+
+# Ignore  templetes on built
+ignore "/templates/tumblr_blog.html"
+ignore "/templates/tumblr_content.html"
+by_tag_formatted('blog').each do |item|
+  proxy "#{item[:url]}/index.html", "/templates/tumblr_blog.html", :locals => item
+end
+by_tag_formatted('content').each do |item|
+  proxy "#{item[:url]}/index.html", "/templates/tumblr_content.html", :locals => item
 end

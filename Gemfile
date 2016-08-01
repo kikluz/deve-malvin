@@ -16,3 +16,5 @@ gem 'font-awesome-middleman'
 
 # For faster file watcher updates on Windows:
 gem 'wdm', '~> 0.1.0', :platforms => [:mswin, :mingw]
+# A Ruby wrapper for the Tumblr v2 API
+gem 'tumblr_client', '~> 0.8.5'
