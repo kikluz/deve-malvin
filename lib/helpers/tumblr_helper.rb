@@ -51,7 +51,7 @@ module TumblrHelper
         # structure it
         result << {
           type: type,
-          title: truncate_words(strip_tags(caption), length: 10),
+          title: truncate_words(strip_tags(caption), length: 3),
           body: caption,
           image_url: image_url,
           slug: slug,
