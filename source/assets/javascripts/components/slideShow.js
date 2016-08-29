@@ -4,20 +4,20 @@ var counter = 0, // to keep track of current slide
 
 // this function is what cycles the slides, showing the next or previous slide and hiding all the others
 var showCurrent = function(){
-    var itemToShow = Math.abs(counter%numItems);// uses remainder (aka modulo) operator to get the actual index of the element to show  
-   
+    var itemToShow = Math.abs(counter%numItems);// uses remainder (aka modulo) operator to get the actual index of the element to show
+
   $items.removeClass('show'); // remove .show from whichever element currently has it
-  $items.eq(itemToShow).addClass('show');    
+  $items.eq(itemToShow).addClass('show');
 };
 
-// add click events to prev & next buttons 
+// add click events to prev & next buttons
 $('.next').on('click', function(){
     counter++;
-    showCurrent(); 
+    showCurrent();
 });
 $('.prev').on('click', function(){
     counter--;
-    showCurrent(); 
+    showCurrent();
 });
 
 
@@ -28,11 +28,11 @@ $('.prev').on('click', function(){
   $('.hero-slideshow').swipe({
     swipeLeft:function() {
       counter++;
-      showCurrent(); 
+      showCurrent();
     },
     swipeRight:function() {
       counter--;
-      showCurrent(); 
+      showCurrent();
     }
   });
 }*/

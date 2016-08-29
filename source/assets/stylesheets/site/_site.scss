@@ -8,14 +8,13 @@ body {
 // ------------------------------------------------------------
 // Typography
 // ------------------------------------------------------------
-
 h1, h2, h3,
 h4, h5, h6 {
 line-height: 1; // Set line-height smaller on larger fonts
 color: #006699;
 }
 p, blockquote, em {
-  color: #919191;
+  color: #dedede;
   font-family: "brandon-grotesque",sans-serif;
 }
 a {color: #ff9933;}
@@ -99,34 +98,22 @@ a {
   color:#fff;
 }
 }
-figure {
-  position: absolute;
-  opacity: 0;
-  transition: 1s opacity;
-//  The problem was being caused by fractional widths. For example using 100% width
-// https://css-tricks.com/forums/topic/css3-transition-opacity-causing-glitch-in-images/
--webkit-transform: translateZ(0);
-width: calc(100% + .49px);
-}
-figcaption {
-  position: absolute;
-  @include media($medium-screen) {
-    font-family: sans-serif;
-    font-size: .8em;
-    bottom: .75em;
-    right: .35em;
-    padding: .25em;
-    color: #fff;
-    background: rgba(0,0,0, .25);
-    border-radius: 2px;
-    a { color: #fff;}
+.slideshow-wrapper {
+    figure {
+      position: absolute;
+      opacity: 0;
+      transition: 1s opacity;
+  //  The problem was being caused by fractional widths. For example using 100% width
+  // https://css-tricks.com/forums/topic/css3-transition-opacity-causing-glitch-in-images/
+  -webkit-transform: translateZ(0);
+  width: calc(100% + .49px);
   }
-}
 
-figure.show {
-  opacity: 1;
-  position: static;
-  transition: 1s opacity;
+  figure.show {
+    opacity: 1;
+    position: static;
+    transition: 1s opacity;
+  }
 }
 .next, .prev {
   color: #fff;
@@ -161,7 +148,7 @@ figure.show {
 // ------------------------------------------------------------
 .intro {
   padding-bottom: 20px;
-    padding-top: 20px;
+  padding-top: 20px;
   @include media($medium-screen) {
     p {
       line-height: 1.4;
@@ -189,7 +176,7 @@ figure.show {
 
 .fb-panel:hover .img-back-end-portfolio {
   transform: scale(1.03);
-  //-webkit-filter: brightness(30%);
+//-webkit-filter: brightness(30%);
 }
 .img-back-end-portfolio {
   margin-left: auto;
@@ -209,22 +196,22 @@ figure.show {
   padding-right: 15%;
   a {color: #ff9933;}
   h4 {
-  //position: relative; /* Needed for the jQuery animation */
-  //padding-bottom: 0.5em;
-  transform: scale(1.03);
-  color: #ffffff;
+//position: relative; /* Needed for the jQuery animation */
+//padding-bottom: 0.5em;
+transform: scale(1.03);
+color: #ffffff;
 
+text-transform: uppercase;
+//opacity: 0;
+transition: all 300ms ease-out 0ms; /* Needed for the jQuery animation  */
+}
+p {
+  position: relative; /* Needed for the jQuery animation */
+  color: #ffffff;
+  font-size: 1.5em;
   text-transform: uppercase;
-  //opacity: 0;
-  transition: all 300ms ease-out 0ms; /* Needed for the jQuery animation  */
-  }
-  p {
-    position: relative; /* Needed for the jQuery animation */
-    color: #ffffff;
-    font-size: 1.5em;
-    text-transform: uppercase;
-    //opacity: 0;
-    transition: all 300ms ease-out 0ms; /* Needed for the jQuery animation */
-  }
+//opacity: 0;
+transition: all 300ms ease-out 0ms; /* Needed for the jQuery animation */
+}
 }
 
